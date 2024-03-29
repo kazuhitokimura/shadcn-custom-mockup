@@ -7,12 +7,21 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { Button } from "@/components/ui/button";
+
 
 export default function Home() {
   return (
     <main className="p-8">
-      <h1 className="text-2xl font-semibold tracking-tight px-4">Invoices</h1>
-      <p className="mt-1 mb-4 text-sm text-muted-foreground px-4">A list of your recent invoices.</p> 
+      <div className="flex flex-row justify-between mb-2 px-3">
+      <div>
+        <h1 className="text-2xl font-semibold tracking-tight ">Invoices</h1>
+      <p className="mt-1 mb-4 text-sm text-muted-foreground">A list of your recent invoices.</p>
+      </div>
+      <Button>
+        button
+      </Button>
+      </div>
       <Table>
   <TableHeader>
     <TableRow>
