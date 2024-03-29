@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Header from "../components/Header";
+import SideMenu from "../components/SideMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
   return (
     <>
       <Header></Header>
-      <div className="app-container">{children}</div>
+      <div className="flex flex-row w-full">
+        <SideMenu></SideMenu>
+        <div className="app-container w-full">{children}</div>
+      </div>
     </>
   );
 }
